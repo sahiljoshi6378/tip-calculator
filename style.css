@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --font-family: 'Space Mono', monospace;
+    /* ### Neutral */
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Light-grayish-cyan-one: hsl(184, 14%, 56%);
+    --Lighter-grayish-cyan: hsl(185, 41%, 84%);
+    --Light-grayish-cyan: hsl(202, 50%, 97%);
+    --White: hsl(0, 0%, 100%);
+    /* font sizes */
+    --output-font: 24px;
+    --radious-14: 14px;
+    --card-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    --input-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    /* break points */
+    --Mobile: 375px;
+    --Desktop: 1440px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Lighter-grayish-cyan);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* globale clases */
+
+input:invalid {
+    border: 1px solid red;
+}
+
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.scale:active {
+    transform: scale(0.9);
+}
+
+.disabled{
+    opacity: 0.2;
+}
+
+.remove{
+    display: none;
+}
+
+/* flex helper calsses [START] */
+
+.flex {
+    display: flex;
+}
+
+.flex_dc {
+    flex-direction: column;
+}
+
+.flex_aic {
+    align-items: center;
+}
+
+.flex_jcc {
+    justify-content: center;
+}
+
+.flex_jsb {
+    justify-content: space-between;
+}
+
+.flex_auto__space {
+    flex: 1 0 auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.app__outer {
+    background-color: white;
+    width: min(40em, 100%);
+    margin-top: 5em;
+    border-radius: 0.4em;
+    box-shadow: var(--card-shadow);
+    padding: 1em;
+    gap: 2em;
+    justify-content: space-between;
+}
+
+
+.particulars {
+    flex: 1 0 auto;
+    max-width: 50%;
+    padding: 0.2em 0.5em;
+}
+
+.input__wrapper {
+    position: relative;
+}
+
+.label {
+    font-weight: 900;
+    font-size: 0.8em;
+    color: var(--Light-grayish-cyan-one);
+}
+
+.input {
+    border: none;
+    outline: none;
+    font-size: 1em;
+    width: 100%;
+    padding: 0.5em 1em 0.5em 2em;
+    direction: rtl;
+    border-radius: 0.2em;
+    font-weight: 600;
+    color: var(--Very-dark-cyan);
+    font-family: var(--font-family);
+    background-color: var(--Lighter-grayish-cyan);
+
+}
+
+
+
+.hide {
+    z-index: -1;
+}
+
+.oopt {
+    position: absolute;
+    left: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1em;
+}
+
+.logo {
+    margin-top: 1.5em;
+}
+
+
+
+.grid__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.5em;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+
+.gird__item {
+    font-size: 1em;
+    padding: 0.6em 0.4em;
+    border-radius: 0.2em;
+    font-weight: 600;
+    color: white;
+    background-color: var(--Very-dark-cyan);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.active {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.output__wrapper {
+    margin-bottom: 1em;
+}
+
+.output {
+    background-color: var(--Very-dark-cyan);
+    flex: 1 0 auto;
+    max-width: 50%;
+    border-radius: 0.5em;
+    padding: 1em;
+
+}
+
+.boldTxt {
+    color: white;
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+.outputWindow {
+    margin-bottom: 0.5em;
+}
+
+.lightTxt {
+    font-size: 0.7em;
+}
+
+.outputTxt {
+    color: var(--Strong-cyan);
+    font-size: 2em;
+}
+
+.primery__btn {
+    border: none;
+    outline: none;
+    font-size: 0.9em;
+    padding: 0.4em 1em 0.4em 1em;
+    border-radius: 0.2em;
+    width: 90%;
+    margin: 0 auto;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-family: var(--font-family);
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+    transition: transform 0.350ms ease-in;
+}
+
+
+@media screen and (max-width: 600px) {
+    .app__outer {
+        flex-direction: column;
+    }
+
+    .particulars {
+        max-width: 100%;
+    }
+
+    .output {
+        max-width: 100%;
+    }
+}

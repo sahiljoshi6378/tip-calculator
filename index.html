@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+    <!-- <h1 class="heading">spli<br>tter</h1> -->
+    <img class="logo" src="./images/logo.svg" alt="">
+    <section class="app__outer flex">
+        <!-- left section [START] -->
+        <div class="particulars">
+            <div class="inpt__outer__wrapper flex flex_dc">
+                <label for="totalBill" class="label">Bill</label>
+                <div class="input__wrapper">
+                    <input class="input" type="number" id="totalBill" name="total bill amount" placeholder="0" min="1" step=0.01>
+                    <img src="./images/icon-dollar.svg" alt="icon-dollar" class="oopt">
+                </div>
+            </div>
+            <div style="margin: 1em 0px;" class="inpt__outer__wrapper flex flex_dc">
+                <label for="totalBill" class="label">Select tip %</label>
+                <div class="grid__wrapper">
+                    <label for="tip__5__percent">
+                        <div class="gird__item flex scale">
+                            <input type="radio" name="tip__percent" id="tip__5__percent" value="5">
+                            <h4 class="percent__txt">5%</h4>
+                        </div>
+                    </label>
+                    <label for="tip__10__percent">
+                        <div class="gird__item flex scale ">
+                            <input type="radio" name="tip__percent" id="tip__10__percent" value="10">
+                            <h4 class="percent__txt">10%</h4>
+                        </div>
+                    </label>
+                    <label for="tip__15__percent">
+                        <div class="gird__item flex scale">
+                            <input type="radio" name="tip__percent" id="tip__15__percent" value="15">
+                            <h4 class="percent__txt">15%</h4>
+                        </div>
+                    </label>
+                    <label for="tip__25__percent">
+                        <div class="gird__item flex scale">
+                            <input type="radio" name="tip__percent" id="tip__25__percent" value="25">
+                            <h4 class="percent__txt">25%</h4>
+                        </div>
+                    </label>
+                    <label for="tip__50__percent">
+                        <div class="gird__item flex scale">
+                            <input type="radio" name="tip__percent" id="tip__50__percent" value="50">
+                            <h4 class="percent__txt">50%</h4>
+                        </div>
+                    </label>
+                    <label for="customRadio">
+                        <div class="gird__item flex relative">
+                            <input style="padding: 0.6em;" class="input hide absolute" type="number" id="customInput"
+                                name="custom tip percent" placeholder="0" min="1">
+                            <input type="radio" id="customRadio" name="tip__percent" value="custom">
+                            <h4 class="percent__txt">custom</h4>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="inpt__outer__wrapper flex flex_dc">
+                <label for="totalNumberOfPeople" class="label">Number of people</label>
+                <div class="input__wrapper">
+                    <input class="input" type="number" id="totalNumberOfPeople" name="number of people" placeholder="0"
+                        min="1">
+                    <img src="./images/icon-dollar.svg" alt="icon-dollar" class="oopt">
+                </div>
+            </div>
+        </div>
+        <!-- left section [END] -->
+        <!-- right section [START] -->
+        <div class="output flex flex_dc flex_jsb">
+            <div class="output__wrapper">
+                <span class="outputWindow flex flex_jsb flex_aic">
+                    <span class="details__span">
+                        <p class="boldTxt">Tip amount</p>
+                        <p class="lightTxt label">/Person</p>
+                    </span>
+                    <h2 class="outputTxt totalTip">$0.00</h2>
+                </span>
+                <span class="outputWindow flex flex_jsb flex_aic">
+                    <span class="details__span">
+                        <p class="boldTxt">Total</p>
+                        <p class="lightTxt label">/Person</p>
+                    </span>
+                    <h2 class="outputTxt splittedAmoutPerPerson">$0.00</h2>
+                </span>
+            </div>
+            <button class="scale disabled primery__btn" id="splitBtn" disabled>split</button>
+            <button class="scale primery__btn remove" id="resetBtn">reset</button>
+        </div>
+        <!-- left section [END] -->
+    </section>
+    <!-- right section -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
